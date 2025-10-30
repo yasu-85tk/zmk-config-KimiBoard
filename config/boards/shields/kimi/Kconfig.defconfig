@@ -1,0 +1,5 @@
+if KIMI
+config ZMK_KEYBOARD_NAME
+    default "kimi"
+endif
+
