@@ -1,0 +1,16 @@
+name: Build KimiBoard firmware
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      board: seeeduino_xiao_ble
+      shield: kimi
+      snippet: studio-rpc-usb-uart
+      cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
