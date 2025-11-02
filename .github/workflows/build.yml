@@ -1,20 +1,6 @@
-name: Build KimiBoard Firmware
-on: [push, pull_request]
+name: Build ZMK firmware
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Docker
-        uses: docker/setup-buildx-action@v2
-
-      - name: Build firmware
-        run: |
-          docker exec -w /workspaces/zmk/app -it loving_hertz \
-          west build -b seeeduino_xiao_ble \
-          -- -DSHIELD=kimiboard \
-             -DZMK_CONFIG="/workspaces/zmk-config/config" \
-             -DZMK_EXTRA_MODULES="/workspaces/zmk-modules/zmk-pmw3610-driver"
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
