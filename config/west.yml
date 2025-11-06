@@ -14,7 +14,7 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: sirocominfo
       revision: main
-    -name: zmk-rgbled-widget
+    - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
   self:
