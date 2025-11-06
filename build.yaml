@@ -2,6 +2,6 @@ include:
   - board: seeeduino_xiao_ble
     shield: kimiboard rgbled_adapter
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n -DZMK_CONFIG_NAME="kimiboard"
   - board: seeeduino_xiao_ble
     shield: settings_reset
