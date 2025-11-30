@@ -1,5 +1,5 @@
 # KimiBoardのファームウェアについて
-<img width="1920" height="1080" alt="Kimiboard_全景-75mm" src="https://github.com/user-attachments/assets/d609a02d-8125-4444-b31f-6931bdf55fed" />
+<img width="1920" height="1080" alt="Kimiboard_全景-75mm" src="https://github.com/user-attachments/assets/a20fbd6b-7907-4879-943e-5765ec64a802" />
 
 - [1.デフォルトファームウェアについて](#1デフォルトファームウェアについて)
   - [1-1. キーマップ](#1-1キーマップ)
