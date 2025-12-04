@@ -47,10 +47,24 @@
 
     combos {
         compatible = "zmk,combos";
+
+        // Key1 + 2 = (□ - ■ ■ □)
+			// スクロールレイヤー
+
+        combo_layer1 {
+            bindings = <&mo 3>;
+            key-positions = <1 2>;
+            timeout-ms = <50>;
+        };
         
         // Key2 + 3 = (□ - □ ■ ■)
-			// 右Alt
+			// 1番レイヤーをトグル(マウス操作限定レイヤー)
 
+        combo_layer2 {
+            bindings = <&tog 1>;
+            key-positions = <2 3>;
+            timeout-ms = <50>;
+        };
         // Key1 + 2 + 3 = (□ -  ■ ■ ■)
 			// 現在の接続先のBT接続情報を消去
 
@@ -61,10 +75,10 @@
         };
 
         // Key1 + 3 = (□ -  ■ □ ■)
-			// 1番レイヤーをトグル(マウス操作限定レイヤー)
+			// BT接続先をトグル
 
         combo_layer4 {
-            bindings = <&tog 1>;
+            bindings = <&bt BT_NXT>;
             key-positions = <1 3>;
             timeout-ms = <50>;
         };
@@ -100,27 +114,3 @@
     };
 
 };
-/ {
-    behaviors {
-        // 単体タップで左Alt、ホールドで layer3（スクロールレイヤー）
-        left_alt_layer3: left_alt_layer3 {
-            compatible = "zmk,behavior-tap-hold";
-            tapping-term-ms = <200>;        // タップ判定時間
-            hold-trigger-keys = <1 2>;      // ホールド判定するキー
-            bindings = <&kp LALT>;          // タップ時に左Alt
-            hold-bindings = <&mo 3>;        // ホールド時に layer3
-        };
-    };
-
-    combos {
-        compatible = "zmk,combo";
-
-        // 1 + 2 を同時押しした場合、layer3（スクロールレイヤー）に入る
-        scroll_layer_combo {
-            key-positions = <1 2>;          // 対象キーの物理インデックス
-            timeout-ms = <50>;              // 同時押し認識のタイムアウト
-            bindings = <&mo 3>;             // 押している間だけ layer3 に入る
-        };
-    };
-};
-
