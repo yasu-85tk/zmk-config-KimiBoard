@@ -49,6 +49,15 @@
     };
 };
 
+/ {
+  trackball_listener {
+    status = "okay";
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+
+  };
+};
+
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -88,13 +97,4 @@
         // scroll-layers = <2 3>;
         // automouse-layer = <4>;
     };
-};
-
-/ {
-  trackball_listener {
-    status = "okay";
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-
-  };
 };
