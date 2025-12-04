@@ -87,6 +87,21 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+    };
+};
+
+&spi0 {
+    status = "disabled";
+
+    trackball: trackball@0 {
+        status = "disabled";
+        reg = <0>;
+    };
+};
+
     trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
