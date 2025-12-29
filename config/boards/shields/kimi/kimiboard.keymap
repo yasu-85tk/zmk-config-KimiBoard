@@ -29,12 +29,6 @@
         >;
     };
 
-    keyboard_layer {
-            bindings = <
-                &trans  &kp BACKSPACE  &kp SPACE  &kp ENTER
-        >;
-    };
-
     auto_mouse_layer {
             bindings = <
                 &trans  &mkp MB3  &mkp LCLK  &mkp RCLK
