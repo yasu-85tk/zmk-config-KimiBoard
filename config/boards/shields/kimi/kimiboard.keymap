@@ -18,19 +18,19 @@
         default_layer {
             bindings = <
                 // row0左から右へ（一番左のキーはリセットボタン）
-                &bt BT_NXT  &kp BACKSPACE  &kp SPACE  &kp ENTER
+                &bt BT_NXT  &kp SPACE  &kp BACKSPACE  &kp ENTER
             >;
 	};
 
     mouse_key_layer {
             bindings = <
-                &trans  &mkp MB3  &mkp LCLK  &mkp RCLK
+                &trans  &mkp LCLK  &mkp MB3  &mkp RCLK
         >;
     };
 
     auto_mouse_layer {
             bindings = <
-                &trans  &mkp MB3  &mkp LCLK  &mkp RCLK
+                &trans  &mkp LCLK  &mkp MB3  &mkp RCLK
         >;
     };
 
